@@ -13,9 +13,7 @@ public class TwoSortedArrayMedian {
      * @return 中位数
      */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int length1 = nums1.length;
-        int length2 = nums2.length;
-        int totalLength = length1 + length2;
+        int totalLength = nums1.length + nums2.length;
         //// 若总个数为奇数，则直接取中间数。
         if (totalLength % 2 == 1) {
             int middleLength = totalLength / 2 + 1;
@@ -24,10 +22,10 @@ public class TwoSortedArrayMedian {
 
         //// 若总个数为偶数，则需要分别查找左侧中位数和右侧中位数，再计算平均中位数。
         // 查找左侧中位数
-        int leftLength = (length1 + length2 + 1) / 2;
+        int leftLength = totalLength / 2;
         int leftMedian = findKthElement(nums1, 0, nums2, 0, leftLength);
         // 查找右侧中位数
-        int rightLength = (length1 + length2 + 2) / 2;
+        int rightLength = totalLength / 2 + 1;
         int rightMedian = findKthElement(nums1, 0, nums2, 0, rightLength);
         return (leftMedian + rightMedian) / 2.0;
     }
@@ -58,15 +56,15 @@ public class TwoSortedArrayMedian {
         }
 
         //// 正常情况
-        int half = length / 2;
-        int midVal1 = (i + half - 1 < nums1.length) ? nums1[i + half - 1] : Integer.MAX_VALUE;
-        int midVal2 = (j + half - 1 < nums2.length) ? nums2[j + half - 1] : Integer.MAX_VALUE;
+        int halfLength = length / 2;
+        int midVal1 = (i + halfLength - 1 < nums1.length) ? nums1[i + halfLength - 1] : Integer.MAX_VALUE;
+        int midVal2 = (j + halfLength - 1 < nums2.length) ? nums2[j + halfLength - 1] : Integer.MAX_VALUE;
         if (midVal1 < midVal2) {
-            // midVal1 < 中间数 < midVal2, 在num1索引范围[i + half, length - half] 和 num2索引范围[j, length - half] 内递归查找
-            return findKthElement(nums1, i + half, nums2, j, length - half);
+            // midVal1 < 中间数 < midVal2, 在num1索引范围[i + halfLength, length - halfLength] 和 num2索引范围[j, length - halfLength] 内递归查找
+            return findKthElement(nums1, i + halfLength, nums2, j, length - halfLength);
         }
 
-        return findKthElement(nums1, i, nums2, j + half, length - half);
+        return findKthElement(nums1, i, nums2, j + halfLength, length - halfLength);
     }
 
     public static void main(String[] args) {
