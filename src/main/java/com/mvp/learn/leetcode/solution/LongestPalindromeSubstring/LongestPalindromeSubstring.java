@@ -1,13 +1,19 @@
 package com.mvp.learn.leetcode.solution.LongestPalindromeSubstring;
 
 /**
- * 给你一个字符串 s，找到 s 中最长的回文子串。
+ * 5.给你一个字符串 s，找到 s 中最长的回文子串。
  * 输入：s = "babad"
  * 输出："bab"
  * 解释："aba" 同样是符合题意的答案。
  */
 public class LongestPalindromeSubstring {
 
+    /**
+     * 获取给定字符串的最长回文子串。
+     *
+     * @param s 给定子串
+     * @return 最长回文子串
+     */
     public String longestPalindrome(String s) {
         int length = s.length();
         boolean[][] dp = new boolean[length][length]; // dp[i][j] 表示字符串 s[i..j] 是否为回文串
