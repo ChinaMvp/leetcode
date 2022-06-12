@@ -27,7 +27,7 @@ public class LongNoRepeatSubstring {
 
             charSet.add(currentChar);
             answer = Math.max(answer, right - left + 1);
-            System.out.println("currentChar=" + currentChar + ", i=" +i + ", left=" + left + ", right=" + right + ", charSet=" + charSet.toString());
+//            System.out.println("currentChar=" + currentChar + ", i=" +i + ", left=" + left + ", right=" + right + ", charSet=" + charSet.toString());
             ++right; // 右指针向右移动
         }
         return answer;
