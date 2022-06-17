@@ -37,7 +37,7 @@ public class RegularExpressionMatching {
                 } else if (p.charAt(j - 1) == '*') {
                     // 若 p[j-1] 为 *，则判断 p[j-2] 与 s[i-1] 是否匹配。
                     // 若 p[j-2] 与 s[i-1] 匹配，有以下两种情况：
-                    // 第一种情况：匹配0次。譬如 s=abcd，p=abc*d，p=abc与s=abc匹配，在p=abc*与s=abc匹配时，*匹配0次字符c，
+                    // 第一种情况：匹配0次。譬如 s=abcd，p=abc*d，已知p=abc与s=abc的匹配结果，在p=abc*与s=abc匹配时，*匹配0次字符c，
                     // 则 p子串 应忽略 c* 两个字符。"p[0, j-1] 匹配 s[0, i-1]的结果" 与 "p[0, j-3] 匹配 s[0, i-1]" 的结果一致。
                     // 即 dp[i][j] = dp[i][j - 2]。
                     // 第二种情况：匹配1或多次。譬如 a=abbb，p=ab*，p=ab与s=ab匹配，在p=abb与s=ab*匹配时，*匹配1次字符b，
