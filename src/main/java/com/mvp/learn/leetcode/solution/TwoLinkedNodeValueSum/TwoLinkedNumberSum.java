@@ -8,17 +8,22 @@ package com.mvp.learn.leetcode.solution.TwoLinkedNodeValueSum;
  */
 public class TwoLinkedNumberSum {
 
+    /**
+     * 两链表数字相加
+     *
+     * @param list1 列表1
+     * @param list2 列表2
+     * @param list3 结果列表
+     */
     public void addTwoNumbers(LinkedList list1, LinkedList list2, LinkedList list3) {
         ListNode l1 = list1.getHead().next;
         ListNode l2 = list2.getHead().next;
 
-        int value1 = 0;
-        int value2 = 0;
-        int valueSum = 0;
-        int value3 = 0;
+        int value1, value2, valueSum;
+        int value3;
         int carry = 0;
         ListNode currentNode = list3.getHead();
-        while (l1 != null || l2 != null || carry != 0) {
+        while ((l1 != null) || (l2 != null) || (carry != 0)) {
             value1 = l1 == null ? 0 : l1.val;
             value2 = l2 == null ? 0 : l2.val;
             valueSum = value1 + value2 + carry; // 同一位上各数字的和
@@ -33,31 +38,31 @@ public class TwoLinkedNumberSum {
 
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-        ListNode n5 = new ListNode(5);
-        list1.addNode(n1);
-        list1.addNode(n2);
-        list1.addNode(n3);
-        list1.addNode(n4);
-        list1.addNode(n5);
+        ListNode node = new ListNode(1);
+        list1.addNode(node);
+        node = new ListNode(2);
+        list1.addNode(node);
+        node = new ListNode(3);
+        list1.addNode(node);
+        node = new ListNode(4);
+        list1.addNode(node);
+        node = new ListNode(5);
+        list1.addNode(node);
+
 
         LinkedList list2 = new LinkedList();
-        ListNode n12 = new ListNode(1);
-        ListNode n22 = new ListNode(2);
-        ListNode n32 = new ListNode(3);
-        ListNode n42 = new ListNode(4);
-        ListNode n52 = new ListNode(5);
-        list2.addNode(n12);
-        list2.addNode(n22);
-        list2.addNode(n32);
-        list2.addNode(n42);
-        list2.addNode(n52);
+        node = new ListNode(1);
+        list2.addNode(node);
+        node = new ListNode(2);
+        list2.addNode(node);
+        node = new ListNode(3);
+        list2.addNode(node);
+        node = new ListNode(4);
+        list2.addNode(node);
+        node = new ListNode(5);
+        list2.addNode(node);
 
         LinkedList list3 = new LinkedList();
-
         TwoLinkedNumberSum obj = new TwoLinkedNumberSum();
         obj.addTwoNumbers(list1, list2, list3);
         list3.showNode();
