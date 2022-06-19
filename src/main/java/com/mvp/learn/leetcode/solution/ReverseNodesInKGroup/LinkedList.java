@@ -1,4 +1,4 @@
-package com.mvp.learn.leetcode.solution.RemoveNthNodeFromEnd;
+package com.mvp.learn.leetcode.solution.ReverseNodesInKGroup;
 
 public class LinkedList {
     private ListNode head; // head 节点
