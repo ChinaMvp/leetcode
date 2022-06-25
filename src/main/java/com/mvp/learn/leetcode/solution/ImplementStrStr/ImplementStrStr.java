@@ -17,6 +17,10 @@ public class ImplementStrStr {
             return 0;
         }
 
+        if (haystack.length() < needle.length()) {
+            return -1;
+        }
+
         int len1 = haystack.length();
         int len2 = needle.length();
         int p = 0;
