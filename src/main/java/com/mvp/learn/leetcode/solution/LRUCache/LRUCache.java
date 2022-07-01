@@ -1,12 +1,13 @@
 package com.mvp.learn.leetcode.solution.LRUCache;
 
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
+
 /**
- * @author <a href="mailto:wangfei@yidian-inc.com">wangfei</a>
- * @since 2022/6/29 22:40:19
+ * LRU（least recently used）最近最少使用，淘汰最长时间未被使用的数据。
  */
-
-import java.util.*;
-
 public class LRUCache {
 
     /**
