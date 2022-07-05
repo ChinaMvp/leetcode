@@ -36,6 +36,7 @@ public class LRUCache {
         String value = null;
         if (values.containsKey(key)) {
             value = values.get(key);
+            // 先从position中删除key，再将key添加到position的末尾
             position.remove(key);
             position.add(key);
         }
@@ -48,7 +49,7 @@ public class LRUCache {
      */
     public void put(String key, String value) {
         if (position.size() == cap) {
-            // 若达到缓存上限，则将距现在最久的缓存删除
+            // 若达到缓存上限，则将距现在最久的缓存删除（即第一个key）
             String firstKey = position.iterator().next();
             position.remove(firstKey);
             values.remove(firstKey);
@@ -68,16 +69,16 @@ public class LRUCache {
 
     public static void main(String[] args) {
         LRUCache lruCache = new LRUCache(4);
-        lruCache.put("a","a");
-        lruCache.put("b","b");
-        lruCache.put("c","c");
-        lruCache.put("d","d");
-        System.out.println("position:"+lruCache.getPosition());
-        System.out.println("values:"+lruCache.getValues());
+        lruCache.put("a", "a");
+        lruCache.put("b", "b");
+        lruCache.put("c", "c");
+        lruCache.put("d", "d");
+        System.out.println("position:" + lruCache.getPosition());
+        System.out.println("values:" + lruCache.getValues());
 
         // a将被淘汰
-        lruCache.put("e","e");
-        System.out.println("position:"+lruCache.getPosition());
-        System.out.println("values:"+lruCache.getValues());
+        lruCache.put("e", "e");
+        System.out.println("position:" + lruCache.getPosition());
+        System.out.println("values:" + lruCache.getValues());
     }
 }
