@@ -1,7 +1,7 @@
 package com.mvp.learn.leetcode.solution.RegularExpressionMatch;
 
 /**
- * 10. 正则表达式匹配
+ * 10、正则表达式匹配
  *
  * '.' 匹配任意单个字符
  * '*' 匹配零个或多个"前面的一个元素"

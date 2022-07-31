@@ -3,7 +3,7 @@ package com.mvp.learn.leetcode.solution.LongestCommonStringPrefix;
 import java.util.Arrays;
 
 /**
- * 14. 最长公共前缀
+ * 14、字符串数组最长公共前缀
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * 如果不存在公共前缀，返回空字符串 ""。
  * 示例 ：

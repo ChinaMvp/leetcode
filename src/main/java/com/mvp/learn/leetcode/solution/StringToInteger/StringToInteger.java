@@ -1,7 +1,8 @@
 package com.mvp.learn.leetcode.solution.StringToInteger;
 
 /**
- * 8.实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 atoi 函数）。
+ * 8、自定义实现字符串转32位有符号整型
+ * 实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 atoi 函数）。
  * <p>
  * 函数 myAtoi(string s) 的算法如下：
  * 读入字符串并丢弃无用的前导空格

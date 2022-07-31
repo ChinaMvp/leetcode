@@ -3,7 +3,7 @@ package com.mvp.learn.leetcode.solution.LongestValidParentheses;
 import java.util.Stack;
 
 /**
- * 32.题目描述
+ * 32、字符串中最长有效括号
  * 给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。
  * 示例 1：
  * 输入：s = "(()"
@@ -15,6 +15,11 @@ import java.util.Stack;
  * 解释：最长有效括号子串是 "()()"
  */
 public class LongestValidParentheses {
+    /**
+     *
+     * @param s
+     * @return
+     */
     public int longestValidParentheses(String s) {
         if (null == s || s.length() == 0) {
             return 0;

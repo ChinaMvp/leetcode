@@ -1,8 +1,9 @@
 package com.mvp.learn.leetcode.solution.ImplementStrStr;
 
 /**
- * 28.实现 strStr() 函数。
- * 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回  -1 。
+ * 28、实现strStr()函数，找出子串第一次出现位置
+ * 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串出现的第一个位置（下标从 0 开始）。
+ * 如果不存在，则返回-1。
  *
  * 说明：
  * 当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。
@@ -12,6 +13,14 @@ package com.mvp.learn.leetcode.solution.ImplementStrStr;
  * 输出：2
  */
 public class ImplementStrStr {
+
+    /**
+     * 获取被查询子串在原始字符串中第一次出现的问题
+     *
+     * @param haystack 原始字符串
+     * @param needle 被查询子串
+     * @return 被查询子串在原始字符串中第一次出现的问题
+     */
     public int strStr(String haystack, String needle) {
         if ("".equals(needle)) {
             return 0;
@@ -41,6 +50,7 @@ public class ImplementStrStr {
                 return p - q;
             }
         }
+
         return -1;
     }
 
