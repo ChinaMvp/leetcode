@@ -35,8 +35,8 @@ public class SearchInRotatedSortedArray {
      * @return 目标值在数组中的索引
      */
     public int search(int[] nums, int target) {
-        int n = nums.length;
-        int left = 0, right = n - 1;
+        int length = nums.length;
+        int left = 0, right = length - 1;
         while (left < right) {
             int middle = (left + right) >> 1;
             if (nums[0] <= nums[middle]) {
@@ -48,7 +48,7 @@ public class SearchInRotatedSortedArray {
                 }
             } else {
                 // 对部分乱序的一部分进行处理
-                if ((nums[middle] < target) && (target <= nums[n - 1])) {
+                if ((nums[middle] < target) && (target <= nums[length - 1])) {
                     left = middle + 1;
                 } else {
                     right = middle;

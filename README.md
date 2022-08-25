@@ -32,5 +32,5 @@
 ## 31、数组下一个排列 NextPermutation
 ## 32、字符串中最长有效括号 LongestValidParentheses
 ## 33、搜索旋转排序数组 SearchInRotatedSortedArray
-## 34、在排序数组中查找元素的第一个和最后一个位置
-## 35、
+## 34、在排序数组中查找元素的第一个和最后一个位置 FirstLastPositionInSortedArray
+## 35、搜索插入位置 
