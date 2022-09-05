@@ -33,4 +33,5 @@
 ## 32、字符串中最长有效括号 LongestValidParentheses
 ## 33、搜索旋转排序数组 SearchInRotatedSortedArray
 ## 34、在排序数组中查找元素的第一个和最后一个位置 FirstLastPositionInSortedArray
-## 35、搜索插入位置 
+## 35、搜索插入位置 SearchInsertSortedArray
+## 36、有效的数独 CheckValidSudoku
