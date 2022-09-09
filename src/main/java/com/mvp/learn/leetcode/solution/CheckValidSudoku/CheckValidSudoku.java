@@ -23,8 +23,9 @@ public class CheckValidSudoku {
         boolean[][] row = new boolean[9][9];
         // 列
         boolean[][] col = new boolean[9][9];
-        // 宫格
+        // 9宫格
         boolean[][] sub = new boolean[9][9];
+        // 逐行逐列遍历棋盘
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 9; ++j) {
                 char c = board[i][j];
@@ -34,8 +35,8 @@ public class CheckValidSudoku {
 
                 // 数值
                 int number = c - '0' - 1;
-                // 该数值所属宫格
-                int k = i / 3 * 3 + j / 3;
+                // 该数值所属9宫格的序号
+                int k = (i / 3) * 3 + j / 3;
                 if (row[i][number] || col[j][number] || sub[k][number]) {
                     return false;
                 }

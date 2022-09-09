@@ -35,3 +35,5 @@
 ## 34、在排序数组中查找元素的第一个和最后一个位置 FirstLastPositionInSortedArray
 ## 35、搜索插入位置 SearchInsertSortedArray
 ## 36、有效的数独 CheckValidSudoku
+## 37、解数独 SudokuSolver
+## 38、外观数列 CountAndSayDigits
