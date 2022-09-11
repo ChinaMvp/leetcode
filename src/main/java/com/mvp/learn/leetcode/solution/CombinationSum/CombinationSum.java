@@ -42,12 +42,13 @@ public class CombinationSum {
         rows = new ArrayList<>();
         this.target = target;
         this.candidates = candidates;
+        // 计算结果行(递归遍历)
         dfs(0, 0, new ArrayList<>());
         return rows;
     }
 
     /**
-     * 计算结果行
+     * 计算结果行(递归遍历)
      *
      * @param sum 当前和
      * @param index 当前候选值的索引
@@ -63,9 +64,11 @@ public class CombinationSum {
             return;
         }
 
+        int candidate;
         for (int i = index; i < candidates.length; ++i) {
-            int candidate = candidates[i];
+            candidate = candidates[i];
             row.add(candidate);
+            // 计算结果行(递归遍历)
             dfs(sum + candidate, i, row);
             row.remove(row.size() - 1);
         }

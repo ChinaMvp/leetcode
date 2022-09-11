@@ -37,3 +37,7 @@
 ## 36、有效的数独 CheckValidSudoku
 ## 37、解数独 SudokuSolver
 ## 38、外观数列 CountAndSayDigits
+## 39、组合总和 CombinationSum
+## 40、40、组合总和II CombinationSumTwo
+## 206、链表反转 ListNodeReverse
+

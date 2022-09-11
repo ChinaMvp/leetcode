@@ -1,7 +1,7 @@
 package com.mvp.learn.leetcode.solution.LinkedListReverse;
 
 /**
- * 链表反转
+ * 206、链表反转
  */
 public class ListNodeReverse {
 
