@@ -38,6 +38,8 @@
 ## 37、解数独 SudokuSolver
 ## 38、外观数列 CountAndSayDigits
 ## 39、组合总和 CombinationSum
-## 40、40、组合总和II CombinationSumTwo
+## 40、组合总和II CombinationSumTwo
+## 41、缺失的第一个正数 FirstMissingPositive
+## 42、接雨水 TrappingRainWater
 ## 206、链表反转 ListNodeReverse
 
