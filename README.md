@@ -41,5 +41,7 @@
 ## 40、组合总和II CombinationSumTwo
 ## 41、缺失的第一个正数 FirstMissingPositive
 ## 42、接雨水 TrappingRainWater
+## 43、字符串相乘 MultiplyStrings
+## 44、通配符匹配 WildcardMatching
 ## 206、链表反转 ListNodeReverse
 
